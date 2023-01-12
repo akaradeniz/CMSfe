@@ -1,0 +1,11 @@
+<header>
+  <h1>Post List</h1>
+  <button mat-flat-button color="primary"
+          (click)="openPostModule(null)">Create Post</button>
+</header>
+<div class="mat-list">
+<div *ngFor="let post1 of posts">
+  <app-post [posts]="post1" (openPostModule)="openPostModule($event)" (getPosts)="getPosts()"></app-post>
+</div>
+</div>
+<!--birinci childde, ikinci parentta-->

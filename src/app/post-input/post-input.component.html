@@ -1,0 +1,28 @@
+<div class="post-input-card">
+<h2>New Post</h2><hr>
+<div class="post-card ">
+
+    <mat-card >
+        <form [formGroup]="cardForm">
+        <mat-form-field class="post-input-card w-100" appearance="outline">
+          <mat-label>Topic:</mat-label>
+          <input matInput formControlName="title" ><br>
+          <small class="invalid-field" >Topic is required</small>
+
+        </mat-form-field>
+
+          <mat-form-field
+            class="post-input-card w-100">
+            <label>Blog :</label><br>
+            <textarea matInput formControlName="body"  [textContent]="posts"></textarea>
+          </mat-form-field>
+
+          <mat-divider></mat-divider>
+        </form>
+        <button mat-raised-button color="accent" (click)="addClick()"
+                class=" mat-button">Save</button>
+      </mat-card>
+
+  </div>
+</div>
+

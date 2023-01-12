@@ -1,0 +1,46 @@
+<div class="register_container mt-4">
+  <form class="register_form" (ngSubmit)="onRegister()"
+        [formGroup]="registerForm">
+    <div class="example-container mat-action-row">
+      <mat-form-field appearance="outline" >
+        <span >First Name : </span>
+        <input matInput placeholder="firstname" formControlName="firstname" >
+        <mat-error *ngIf="registerForm.controls['firstname'].errors">What is your firstname</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="example-container mat-action-row">
+      <mat-form-field appearance="outline">
+        <span >Last Name : </span>
+        <input matInput placeholder="lastname" formControlName="lastname" >
+        <mat-error  *ngIf="registerForm.controls['lastname'].errors" >Lastname please</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="example-container mat-action-row">
+      <mat-form-field appearance="outline" >
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        <mat-error *ngIf="registerForm.controls['email'].errors">Please enter your email</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="example-container mat-action-row">
+      <mat-form-field appearance="outline" >
+        <span >Username: </span>
+        <input matInput placeholder="username" formControlName="username" >
+        <mat-error *ngIf="registerForm.controls['username'].errors">Please enter a valid username</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="example-container mat-action-row">
+      <mat-form-field appearance="outline" >
+        <span >Password: </span>
+        <input matInput placeholder="password" formControlName="password" >
+        <mat-error *ngIf="registerForm.controls['password'].errors">Make sure that your password is true</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="mat-button ">
+      <button class="ml-2" color="primary" mat-raised-button (click)="onLogin()">Login</button>
+      <button class="ml-3" color="warn" mat-raised-button>Register</button>
+    </div>
+  </form>
+
+</div>

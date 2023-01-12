@@ -1,0 +1,35 @@
+<div class="post-card mb-2 mt-2">
+      <mat-card-content>
+        <h2 aria-placeholder="title">Topic: {{posts.title}}</h2>
+        <h3 aria-placeholder="author">Posted by :{{posts.author.username}}</h3>
+        <p>Post: {{ posts.body }}</p>
+        <p>Created Date: {{posts.createdDate}}</p>
+        <p >
+          <span *ngIf="posts.updatedDate">
+          Updated Date: {{posts.updatedDate}}</span>
+        <small class="text-warning no-content" *ngIf="!posts.updatedDate"></small>
+<!--          You can use small part for information message-->
+        </p>
+        <mat-divider></mat-divider>
+      </mat-card-content>
+
+      <mat-card-content>
+        <h2>COMMENDS
+        <mat-icon> comment</mat-icon></h2>
+        <div *ngFor=" let commend1 of posts.commends">
+        <app-commend [commends]="commend1" (openCommendModule)="openCommendModule($event)"></app-commend>
+        </div>
+      </mat-card-content>
+      <mat-card-footer class="mat-display-4 mb-2">
+        <button mat-raised-button color="primary"  [routerLink]="'/post-detail/'+posts.id" class="ml-1">Detail</button>
+        <button mat-raised-button color="accent" class="ml-1" (click)="editPost(posts)">Edit</button>
+        <button mat-raised-button color="warn" class="ml-1" (click)="deletePost(posts.id)">Delete</button>
+      </mat-card-footer>
+</div>
+
+<!--<mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>-->
+
+
+<!--<mat-icon>share</mat-icon>-->
+<!--<mat-icon>message</mat-icon>-->
+

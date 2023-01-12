@@ -1,0 +1,24 @@
+<div class="users">
+  <h1>USERS</h1>
+
+  <div class="d-flex align-content-center m-3">
+    <button mat-flat-button color="warn" (click)="onClick()" class="btn btn-primary">New Contact</button>
+    <div class="input-group mb-3">
+      <mat-form-field>
+        <span class="input-group-text" id="basic-addon1">Search</span>
+        <input matInput [ngModel]="searchText" (ngModelChange)="filterList($event)" class="form-control">
+      </mat-form-field>
+    </div><hr>
+
+  </div>
+  <div class="mat-action-row">
+    <div class="user-container ">
+      <div class="mat-list ">
+        <div *ngFor="let user of userList">
+          <app-user-profile [users]="user"></app-user-profile>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

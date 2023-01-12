@@ -1,0 +1,33 @@
+<div>
+  <mat-toolbar class="mat-toolbar">
+<!--    <button mat-icon-button class="toolbar-icon" aria-label="Example icon-button with menu icon">-->
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/blog-post"
+      routerLinkActive="active" >Blog Posts</button>
+      <button mat-menu-item routerLink="/user-list"
+              routerLinkActive="active">User List</button>
+      <button mat-menu-item routerLink="/user-profile"
+              routerLinkActive="active">User Profile</button>
+      <button mat-menu-item routerLink="/post-input"
+              routerLinkActive="active">Create New Post</button>
+    </mat-menu>
+
+
+<!--    </button>-->
+    <span>My CMS</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-raised-button routerLink="/login" color="primary" class="ml-2"
+            routerLinkActive="active">Login</button>
+    <button mat-raised-button routerLink="/register" color="primary" class="ml-2"
+            routerLinkActive="active">Register</button>
+
+  </mat-toolbar>
+</div>

@@ -1,0 +1,16 @@
+<div class="post-detail"  *ngIf="post">
+  <p>{{post.id}}</p>
+  <p >{{post.title}}</p>
+<p>{{post.author.username}}</p>
+  <p >{{post.body}}</p>
+  <p >{{post.updatedDate}}</p>
+  <form [formGroup]="commendForm">
+    <textarea formControlName="body"></textarea><br>
+    <button (click)="onCreateNewCommend()">Save Commend</button>
+
+  </form>
+  <ul>
+    <li *ngFor="let commend of post.commends">{{commend.body}}</li>
+  </ul>
+
+</div>

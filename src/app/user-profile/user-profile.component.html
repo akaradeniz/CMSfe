@@ -1,0 +1,18 @@
+<div class="user-container">
+  <mat-card>
+  <mat-card-header>
+  <mat-card-title>User Profile</mat-card-title>
+    <mat-card-subtitle>{{users.id}}</mat-card-subtitle>
+    <mat-card-subtitle>First Name:{{users.firstname}}</mat-card-subtitle>
+    <mat-card-subtitle>Last Name:{{users.lastname}}</mat-card-subtitle>
+    <mat-card-subtitle>{{users.email}}</mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onUpdateClick()"
+            class="ml-1">EDIT</button>
+    <button  mat-raised-button color="accent" (click)="onDeleteClick()"
+             class="ml-1" >DELETE</button>
+  </mat-card-actions>
+  </mat-card>
+</div>

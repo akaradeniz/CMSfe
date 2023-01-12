@@ -1,0 +1,12 @@
+.post-card{
+
+  background-color: bisque;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  /*//normalde row olarak dizer*/
+  align-items: center;
+justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
